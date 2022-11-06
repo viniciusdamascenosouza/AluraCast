@@ -1,0 +1,72 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main";
+    grid-template-columns: auto 1fr;
+}
+
+.cabecalho{
+    grid-area: header;
+}
+
+
+.principal{
+    grid-area: main;
+}
+.secao {
+    display: grid;
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    grid-area: aside;
+}
+ .menu-lateral{
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    row-gap: 2rem;
+ }
+
+/* PRIMEIRA SEÇÃO */
+.secao-horizontal {
+    grid-template-rows: 120px auto;
+}
+
+.secao-horizontal .cartao{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.secao-horizontal .cartao__imagem {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.secao-horizontal .cartao__titulo{
+    grid-area: 1/2/2/3;
+}
+
+.secao-horizontal .cartao__subtitulo{
+    grid-area: 2/2/3/3;
+}
+
+.secao-horizontal .cartao__player{
+    grid-area: 3/2/4/3;
+}
+
+.secao-horizontal .cartao__botao{
+    grid-area: 1/3/4/4;
+}
+
+/* SEÇÃO VERTICAL */
+.secao-vertical {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 2fr;
+}
+
+.secao-vertical .secao__cartoes {
+    grid-column: 1/3;
+}
